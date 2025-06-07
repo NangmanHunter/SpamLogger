@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head><title>My App</title></head>
+<body>
+    <h1>Welcome!</h1>
+
+
+
+
+
+    <button id="Post">Post</button>
+    <section id="PostComment" contenteditable="true">댓글입력</section>
+    <hr>
+    <button id="Get">Get</button>
+    <section id="GetComment"></section>
+
+
+
+</body>
+</html>
+<style>
+    html{
+        color-scheme: dark;
+    }
+</style>
+<script>
+    function GetComment() {
+        fetch('http://localhost:3000/comments', {
+        })
+        .then(res => res.json())
+        .then(data => {
+            
+            let GetHtml=``
+            data.forEach(element => {
+                GetHtml+=`<li>
+                    <small>${element.createdAt}</small>
+                    ${element.text}
+                    </li>`
+            });
+            GetHtml=`<ul>${GetHtml}</ul>`
+            
+            document.getElementById('GetComment').insertAdjacentHTML(`afterbegin`,GetHtml)
+            console.log('성공:', data)
+        })
+        .catch(err => console.error('실패:', err));
+    };
+
+
+
+
+    
+    document.getElementById('Get').addEventListener(`click`, function(){
+        GetComment();
+    })
+
+    
+
+    document.getElementById('Post').addEventListener(`click`, function(){
+
+        let t=document.getElementById('PostComment').textContent;
+        fetch('http://localhost:3000/comments', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ text: `프론트엔드에서 보낸 댓글입니다. ${t}` })
+        })
+        .then(res => res.json())
+        .then(data => {
+            GetComment();
+            console.log('성공:', data)
+
+        })
+        .catch(err => console.error('실패:', err));
+    })
+
+
+
+
+
+
+
+
+
+
+</script>

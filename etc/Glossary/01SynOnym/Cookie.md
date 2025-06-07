@@ -1,0 +1,22 @@
+- Cookie
+- CooKie
+- 쿠키
+- CK
+- 서버가 만든 어떤 값(토큰, ID 등)을 브라우저가 기억하는 것
+- 브라우저저장
+- 클라이언트측저장
+- 클라이언트저장
+- Client측저장
+- Client쪽저장
+- Client저장
+- Browser저장
+- Browser측저장
+- 브라우저가 저장하는 메모장 같은 것
+- Browser쪽저장
+- 같은 웹사이트라도 브라우저가 다르면 쿠키는 완전히 분리
+- 브라우저마다
+- ✅브라우저마다
+- ❌사이트마다
+- C:\Users\사용자이름\AppData\Local\Google\Chrome\User Data\Default\Network\Cookies
+- 쿠키▶️메모지
+- 브라우저▶️메모지보관함

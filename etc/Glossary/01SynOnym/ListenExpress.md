@@ -1,0 +1,10 @@
+- ListenExpress
+- ListenApp
+- AppListen
+- express() listen
+- app listen
+- app.listen
+- app.listen()
+- App Listen
+- app.listen() 은 서버를 실제로 실행해서 요청을 대기
+- app.listen() 나중에
