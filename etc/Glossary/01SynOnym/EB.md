@@ -1,0 +1,46 @@
+- 조
+- 건
+- 조건
+- 조건부
+- 조건기준
+- 조건적
+- 이벤트적
+- 공간
+- 공간적
+- 공간기준
+- 작위적
+- 인위적
+- 이벤트기준
+- Event-driven (이벤트 기반)
+- 이벤트 기준 (Event-based)
+- 이벤트 기준 
+- 이벤트기준 
+- 이벤트
+- 사건
+- 사건기준
+- Event-based
+- Event-Based
+- EventBased
+- Reactive Programming (반응형 프로그래밍)
+- Webhook / Callback
+- Event Listener (addEventListener)
+- 특정 사건 발생 시 처리
+- Pull
+- 변화에 따라 반응               
+- 특정 트리거에 반응           
+- 사용자 동작 등 외부 이벤트            
+- Pull: 주기적으로 요청 
+- 반응형 (reactive) 
+- Observer, Stream 
+- 이벤트 버스, RxJS, WebSocket
+- Pub/Sub, Webhook, Signal 
+- 사용자 입력, 시스템 반응 
+- Event-driven
+- Event-based 
+- Push        
+- Asynchronous
+- Reactive    
+- 이벤트에 반응 
+- 사건에 따라 실행
+- 상대가 알아서 보내줌
+- 반응형 프로그래밍 철학 

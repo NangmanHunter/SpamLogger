@@ -1,10 +1,13 @@
 // app.js
 const express = require('express');
+const cookieParser = require('cookie-parser');
+
 const mongoose = require('mongoose');
 const commentRoutes = require('./routes/comments');
 
 const app = express();
 app.use(express.json());
+app.use(cookieParser());
 
 // 📌 MongoDB 연결
 mongoose.connect('mongodb://localhost:27017/mydb', {

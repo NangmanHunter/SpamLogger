@@ -1,0 +1,11 @@
+- uuid
+- UUID
+- Universally Unique Identifier
+- Universally Unique IDentifier
+- UniversallyUniqueIDentifier
+- 범용 고유 식별자
+- 범용 고유식별자
+- 범용고유식별자
+- 중복될 확률이 거의 0에 수렴하는 랜덤 문자열
+- 보통 고유 사용자 식별, 세션 ID, 리소스 ID, 토큰 등에 사용
+- Ex. 550e8400-e29b-41d4-a716-446655440000

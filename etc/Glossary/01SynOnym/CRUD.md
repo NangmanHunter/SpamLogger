@@ -1,5 +1,0 @@
-- 논리상▶CRUD
-- 작업상▶RCUD
-- 추상순▶RCUD
-- 작업순▶RCUD
-- 코드순▶RCUD

@@ -1,0 +1,43 @@
+- 일반적인 객체 참조 (Object Reference)
+- 객체 참조 (Object Reference)
+- 객체 참조
+- 객체참조
+- Object Reference
+- ObjectReference
+- Reference
+- 모듈 전체 가져오기 (Whole Module Import)
+- 구조 분해 없이 전체 참조
+- 전통적인 모듈 참조 방식
+- 모듈 참조 방식
+- 모듈 참조방식
+- 모듈참조방식
+- 모듈전체참조방식
+- 전체참조방식
+- 모듈전체방식
+- 모듈방식
+- 참조방식
+- 참조
+- 모듈참조 방식
+- 모듈참조방식
+- Dot notation 방식 (객체 접근자 방식)
+- Dot notation 방식 
+- Dot Notation 방식 
+- Dot Notation방식 
+- DotNotation 방식 
+- DotNotation방식 
+- 객체 접근자 방식
+- 객체 접근자방식
+- 객체접근자 방식
+- 객체접근자방식
+- OR
+- OR방식
+- 전부
+- 전부호출
+- 전체 객체를 가져오는 방식
+- 전체객체방식
+- 전체방식
+- 전체
+- 전체객체
+- 전체▶️객체
+- 전체호출
+- 모듈 객체에서 직접 호출 

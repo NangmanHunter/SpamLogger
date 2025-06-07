@@ -20,3 +20,22 @@
 - C:\Users\사용자이름\AppData\Local\Google\Chrome\User Data\Default\Network\Cookies
 - 쿠키▶️메모지
 - 브라우저▶️메모지보관함
+- ❌영구쿠키
+- ❌영속쿠키
+- ✅단속쿠키
+- ✅일시쿠키
+- ✅비영구쿠키
+- 일시적
+- 일시
+- 📌Chrome: 보통 400일 정도가 최대
+- 📌Firefox: 1~2년 제한
+- 📌Safari: ITP(Intelligent Tracking Prevention)로 쿠키 만료를 7일 이하로 강제
+- 같은 도메인/경로에 대해 자동 전송
+- 같은도메인/경로에 대해 자동 전송
+- 같은도메인/경로에대해 자동 전송
+- 같은도메인/경로에대해 자동전송
+- 같은도메인/경로에 자동전송
+- 같은도메인/경로 자동전송
+- 같은도메인/경로대해 자동전송
+- 자동전송
+- TimeBased

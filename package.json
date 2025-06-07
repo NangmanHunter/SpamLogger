@@ -1,7 +1,9 @@
 {
   "dependencies": {
+    "cookie-parser": "^1.4.7",
     "express": "^5.1.0",
-    "mongoose": "^8.15.1"
+    "mongoose": "^8.15.1",
+    "uuid": "^11.1.0"
   },
   "name": "spamlogger",
   "version": "1.0.0",

@@ -1,0 +1,47 @@
+- 시간적
+- 자연적
+- 인터벌적
+- 시간기준
+- 인터벌기준
+- 시간 기준 (Time-based)
+- 시간 기준
+- 시간기준
+- 시간
+- Time-based
+- Time-Based
+- TimeBased
+- Time
+- TB
+- Scheduled Task (스케줄 기반 작업)
+- Cron Job
+- Interval Timer (setInterval)
+- 일정 주기로 상태를 확인하는 방식
+- Push
+- 시간표대로 실행
+- 정해진 시간마다 동작
+- 정기 반복 
+- Push: 이벤트가 발생하면 전달 
+- 자동전송
+- 명령형 (imperative) 
+- Polling, Timer 
+- `setTimeout`, cron, 배치(batch) 
+- 주기적 작업
+- 주기적 상태 갱신 
+- Polling     
+- Timer-based 
+- Pull        
+- Synchronous 
+- Imperative  
+- 상태를 주기적으로 확인 
+- 시간에 따라 실행 
+- 내가 요청 
+- 시점 제어 방식이 달라짐
+- 명령형 
+- 시기
+- 시기부
+- 시
+- 종기
+- 종기부
+- 기
+- 기한
+- 기한부

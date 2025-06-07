@@ -35,11 +35,12 @@
                 GetHtml+=`<li>
                     <small>${element.createdAt}</small>
                     ${element.text}
+                    ${element.token}
                     </li>`
             });
             GetHtml=`<ul>${GetHtml}</ul>`
             
-            document.getElementById('GetComment').insertAdjacentHTML(`afterbegin`,GetHtml)
+            document.getElementById('GetComment').innerHTML=GetHtml
             console.log('성공:', data)
         })
         .catch(err => console.error('실패:', err));
@@ -63,7 +64,7 @@
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({ text: `프론트엔드에서 보낸 댓글입니다. ${t}` })
+            body: JSON.stringify({ text: `${t}` })
         })
         .then(res => res.json())
         .then(data => {

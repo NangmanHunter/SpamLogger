@@ -1,4 +1,8 @@
 - Session
+- SessionCookie
+- Session Cookie
+- Session쿠키
+- Session쿠키▶️Session단위쿠키
 - SEssion
 - SESSion
 - SesSion
@@ -15,3 +19,13 @@
 - Server측저장
 - Server저장
 - Server쪽저장
+- 브라우저 종료 시 삭제
+- 브라우저 종료시 삭제
+- 브라우저종료시 삭제
+- 브라우저종료시삭제
+- 종료시삭제
+- 종료삭제
+- 브라우저종료삭제
+- 브라우저종료
+- 종료
+- EventBased
