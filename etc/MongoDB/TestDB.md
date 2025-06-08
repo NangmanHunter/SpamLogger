@@ -37,3 +37,15 @@ GUI
 - Memory
 - Memory>>Docker
 
+
+
+## Memory방식
+- ❌ 일반적인 접근 불가	외부 CLI나 GUI 툴로 접근하려면 추가 설정 필요
+
+Docker
+- 빠른 로컬 개발 & 눈으로 데이터 보기	
+- Docker로 MongoDB 띄우기 🐳
+- GUI로 데이터 보기	
+- Docker + MongoDB Compass 연결
+- 실제 MongoDB처럼 테스트	
+- Docker + 초기 스크립트 실행 (init.js)
