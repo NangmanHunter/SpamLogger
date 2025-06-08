@@ -1,0 +1,37 @@
+- 부모붙이기
+- 부모만붙이기
+- 이벤트 위임 (Event Delegation)
+- 이벤트 위임 
+- Event Delegation
+- EventDelegation
+- 간접바인딩
+- InDirect Binding
+- Indirect Binding
+- IDB
+- IB
+- InDirectBinding
+- IndirectBinding
+- InDirectEvent
+- IndirectEvent
+- InDirect Event
+- Indirect Event
+- EventInDirect
+- EventIndirect
+- Event InDirect
+- Event Indirect
+- ED
+- 이벤트 위임 (부모에 리스너 한 번만)	
+- 이벤트위임
+- 부모에 리스너 한 번만
+- 성능 좋고, 동적으로 추가되는 요소에 자동 대응
+- 이벤트 위임 방식이 가장 안정적
+- 그래서 실무에서도 많이 쓰입니다.
+- 부모붙이기
+- 이벤트붙이기▶️간접붙이기
+- 이벤트붙이기▶️부모붙이기
+- ✅ 이벤트 위임
+- ✅이벤트위임
+- ✅이벤트간접
+- ✅이벤트간접바인딩
+- ✅간접바인딩
+- ✅간접

@@ -1,2 +1,4 @@
 - OR↔️DA
+- ObjectReference↔️DestructingAssignment
+- ObjectReference방식↔️DestructingAssignment방식
 - OR방식↔️DA방식

@@ -127,9 +127,107 @@ id↔️token
 
 
 
-##
-이벤트붙이기
-- 매번붙이기
-  - GetComment() 내부에서 eventListener를 다시 붙이기
-- 부모만붙이기
-  - 이벤트 위임 (Event Delegation)
+## EventDelegation
+DirectBinding
+```js
+function GetComment() {
+    fetch('http://localhost:3000/comments')
+        .then(res => res.json())
+        .then(data => {
+            let GetHtml = ``;
+            data.forEach(element => {
+                GetHtml += `<li>
+                    <small class="IdComment" hidden>${element._id}</small>
+                    <small>${element.createdAt}</small>
+                    <span class="TextComment">${element.text}</span>
+                    ${element.isMine ? `
+                        <button class="Put">🔨</button>
+                        <button class="Delete">❌</button>
+                    ` : ``}
+                </li>`;
+            });
+            GetHtml = `<ul>${GetHtml}</ul>`;
+            document.getElementById('GetComment').innerHTML = GetHtml;
+
+            // ⭐ 여기서 이벤트 리스너 다시 붙이기
+            document.querySelectorAll('.Put').forEach((btn) => {
+                btn.addEventListener('click', function () {
+                    const parent = this.parentElement;
+                    const id = parent.querySelector('.IdComment').textContent;
+                    const t = parent.querySelector('.TextComment').textContent;
+
+                    fetch(`http://localhost:3000/comments/${id}`, {
+                        method: 'PUT',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({ text: t })
+                    })
+                        .then(res => res.json())
+                        .then(data => {
+                            GetComment();
+                        });
+                });
+            });
+
+            document.querySelectorAll('.Delete').forEach((btn) => {
+                btn.addEventListener('click', function () {
+                    const parent = this.parentElement;
+                    const id = parent.querySelector('.IdComment').textContent;
+
+                    fetch(`http://localhost:3000/comments/${id}`, {
+                        method: 'DELETE',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                    })
+                        .then(res => res.json())
+                        .then(data => {
+                            GetComment();
+                        });
+                });
+            });
+
+        })
+        .catch(err => console.error('실패:', err));
+}
+```
+
+EventDelegation
+```js
+document.getElementById('GetComment').addEventListener('click', function (e) {
+    if (e.target.classList.contains('Put')) {
+        const parent = e.target.parentElement;
+        const id = parent.querySelector('.IdComment').textContent;
+        const t = parent.querySelector('.TextComment').textContent;
+
+        fetch(`http://localhost:3000/comments/${id}`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ text: t })
+        })
+            .then(res => res.json())
+            .then(data => {
+                GetComment();
+            });
+    }
+
+    if (e.target.classList.contains('Delete')) {
+        const parent = e.target.parentElement;
+        const id = parent.querySelector('.IdComment').textContent;
+
+        fetch(`http://localhost:3000/comments/${id}`, {
+            method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+        })
+            .then(res => res.json())
+            .then(data => {
+                GetComment();
+            });
+    }
+});
+```
