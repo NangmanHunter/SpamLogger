@@ -105,7 +105,8 @@
     document.getElementById('GetComment').addEventListener('click', function (e) {
         if (e.target.classList.contains('Put')) {
 
-            
+            if(!confirm(`🔨수정하시겠습니까?`)) return
+
             const parent = e.target.parentElement;
             const id = parent.querySelector('.IdComment').textContent;
             const t = parent.querySelector('.TextComment').textContent;
@@ -117,13 +118,16 @@
                 },
                 body: JSON.stringify({ text: t })
             })
-                .then(res => res.json())
-                .then(data => {
-                    GetComment();
-                });
+            .then(res => res.json())
+            .then(data => {
+                GetComment();
+            });
         }
 
         if (e.target.classList.contains('Delete')) {
+
+            if(!confirm(`❌삭제하시겠습니까?`)) return
+
             const parent = e.target.parentElement;
             const id = parent.querySelector('.IdComment').textContent;
 
