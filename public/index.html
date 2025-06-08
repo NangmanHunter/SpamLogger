@@ -17,9 +17,6 @@
     <button id="Get">Get</button>
     <section id="GetComment"></section>
 
-    <hr>
-    <button id="Put">Put</button>
-    <section id="PutComment"></section>
 
 
 
@@ -39,10 +36,19 @@
             
             let GetHtml=``
             data.forEach(element => {
+                
+                console.log("isMine: ", element.isMine);
+
                 GetHtml+=`<li>
-                    <small>${element.createdAt}</small>
-                    ${element.text}
-                    ${element.token}
+                        <small class="IdComment" hidden>${element._id}</small>
+                        <small>${element.createdAt}</small>
+                        <span class="TextComment">${element.text}</span>
+                        
+                        ${element.isMine?`
+                        <button class="Put">🔨</button>
+                        <button class="Delete">❌</button>
+                        `:``}
+                        
                     </li>`
             });
             GetHtml=`<ul>${GetHtml}</ul>`
@@ -66,6 +72,8 @@
 
     document.getElementById('Post').addEventListener(`click`, function(){
 
+
+
         let t=document.getElementById('PostComment').textContent;
         fetch('http://localhost:3000/comments', {
             method: 'POST',
@@ -86,26 +94,67 @@
 
 
 
-    document.getElementById('Put').addEventListener(`click`, function(){
+    putButtons=document.querySelectorAll('.Put');
+    putButtons.forEach((btn)=>{
+        btn.getElementById('Put').addEventListener(`click`, function(){
+        
+            const parentElement = this.parentElement;
+            const idComment=parentElement.querySelector(`.IdComment`).textContent;
+            console.log(idComment);
 
-        let t=document.getElementById('PostComment').textContent;
-        fetch('http://localhost:3000/comments/:id', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ text: `${t}` })
-        })
-        .then(res => res.json())
-        .then(data => {
-            GetComment();
-            console.log('성공:', data)
+            const t=parentElement.querySelector(`.TextComment`).textContent;
+            console.log(t);
 
+            fetch(`http://localhost:3000/comments/${idComment}`, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ text: `${t}` })
+            })
+            .then(res => res.json())
+            .then(data => {
+                GetComment();
+                console.log('성공:', data)
+
+            })
+            .catch(err => console.error('실패:', err));
         })
-        .catch(err => console.error('실패:', err));
+
     })
 
 
+
+
+    deleteButtons=document.querySelectorAll('.Delete');
+    deleteButtons.forEach((btn)=>{
+        btn.addEventListener(`click`, function(){
+
+
+            const parentElement = this.parentElement;
+
+            const idComment=parentElement.querySelector(`.IdComment`).textContent;
+            console.log(idComment);
+
+            
+            fetch(`http://localhost:3000/comments/${idComment}`, {
+                method: 'DELETE',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                // body: JSON.stringify({ text: `${t}` })
+            })
+            .then(res => res.json())
+            .then(data => {
+                GetComment();
+                console.log('성공:', data)
+
+            })
+            .catch(err => console.error('실패:', err));
+        })
+
+
+    })
 
 
 

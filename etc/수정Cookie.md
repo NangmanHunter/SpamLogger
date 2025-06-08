@@ -48,6 +48,64 @@ isMine
 - ✅서버
   - 가공해서붙임.
 
+isMine붙이기
+```js
+const comments = await Comment.find();
+
+res.json(comments);
+```
+```js
+const comments = await Comment.find().lean(); // lean()으로 plain object 반환
+const result = comments.map(comment => ({
+  ...comment,
+  isMine: comment.token === userToken
+}));
+
+res.json(result);
+```
+
+
+
+##
+token
+- ❌클라이언트제공
+- ✅서버에서만검사
+
+검사지표
+- ❌isMine
+  - 사용자조작가능
+  - ❌신뢰
+  - ✅버튼만제공
+- token
+  - 실제서버에서판단
+  - token도받아다판단
+  - token도긁어다판단
+
+즉,
+- isMine
+  - 형식판단
+- token
+  - 실질판단
+두번판단
+
+
+token제공
+- ✅본인Token만제공
+- ❌타인Token제공
+
+혹은
+- ❌본인Token도제공
+- 보안상더좋음.
+- Token그냥
+- 뒷단에서만처리ㄱㄱ.
+
+
+id↔️token
+- ✅id제공
+  - ✅_id
+- ❌token제공
+  - ❌token
+
 
 
 
@@ -65,3 +123,13 @@ isMine
    2. 최강 보안, 단 익명 아님
 
 
+
+
+
+
+##
+이벤트붙이기
+- 매번붙이기
+  - GetComment() 내부에서 eventListener를 다시 붙이기
+- 부모만붙이기
+  - 이벤트 위임 (Event Delegation)

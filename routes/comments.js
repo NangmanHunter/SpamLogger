@@ -34,12 +34,16 @@ router.post('/', async (req, res) => {
 router.get('/', async (req, res) => {
   try {
 
-    let token = req.cookies.userToken;
-    console.log("TokenCookie👉", token);
-    
-    const comments = await Comment.find();
+    const userToken = req.cookies.userToken;
+    console.log("TokenCookie👉", userToken);
 
-    res.json(comments);
+    const comments = await Comment.find().lean(); // lean()으로 plain object 반환
+    const result = comments.map(comment => ({
+      ...comment,
+      isMine: comment.token === userToken
+    }));
+
+    res.json(result);
 
   } catch (err) {
     res.status(500).json({ error: '댓글 조회 실패' });
