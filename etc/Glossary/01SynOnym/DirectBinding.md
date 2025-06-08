@@ -4,6 +4,8 @@
 - Direct Binding
 - DB
 - DirectBinding
+- Binding
+- 바인딩
 - DirectEvent
 - Direct Event
 - EventDirect
@@ -12,7 +14,6 @@
 - 개별
 - Individual Binding	
 - 각각의 요소마다 직접 이벤트 리스너를 등록하는 방식 (ex. btn.addEventListener() 반복)
-
 - 매번붙이기
 - GetComment() 내부에서 eventListener를 다시 붙이기
 - GetComment() 안에서 이벤트 다시 붙이기	
@@ -26,4 +27,5 @@
 - 개별 바인딩(Individual Binding)
 - ❌ 직접 바인딩
 - ❌직접바인딩
+- ❌바인딩
 - ❌직접

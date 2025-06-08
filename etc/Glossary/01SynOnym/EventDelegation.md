@@ -3,6 +3,8 @@
 - 이벤트 위임 (Event Delegation)
 - 이벤트 위임 
 - Event Delegation
+- Delegation
+- 위임
 - EventDelegation
 - 간접바인딩
 - InDirect Binding

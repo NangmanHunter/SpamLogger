@@ -4,6 +4,8 @@
 - 객체참조
 - Object Reference
 - ObjectReference
+- Object방식
+- Reference방식
 - Reference
 - 모듈 전체 가져오기 (Whole Module Import)
 - 구조 분해 없이 전체 참조
