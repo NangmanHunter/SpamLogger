@@ -2,17 +2,24 @@
 <html>
 <head><title>My App</title></head>
 <body>
-    <h1>Welcome!</h1>
+    <h1 style="text-align: center;">스팸번호<br>
+        <small>SpamNumber</small>
+    </h1><br>
+    <br>
 
 
 
 
 
     <button id="Post">Post</button>
-    <section id="PostComment" contenteditable="true">댓글입력</section>
+    <section id="PostComment" contenteditable="true">번호입력</section>
     <hr>
     <button id="Get">Get</button>
     <section id="GetComment"></section>
+
+    <hr>
+    <button id="Put">Put</button>
+    <section id="PutComment"></section>
 
 
 
@@ -49,12 +56,13 @@
 
 
 
-    
+    GetComment();
+
+
     document.getElementById('Get').addEventListener(`click`, function(){
         GetComment();
     })
 
-    
 
     document.getElementById('Post').addEventListener(`click`, function(){
 
@@ -78,6 +86,24 @@
 
 
 
+    document.getElementById('Put').addEventListener(`click`, function(){
+
+        let t=document.getElementById('PostComment').textContent;
+        fetch('http://localhost:3000/comments/:id', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ text: `${t}` })
+        })
+        .then(res => res.json())
+        .then(data => {
+            GetComment();
+            console.log('성공:', data)
+
+        })
+        .catch(err => console.error('실패:', err));
+    })
 
 
 

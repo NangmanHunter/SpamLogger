@@ -2,10 +2,10 @@
 const mongoose = require('mongoose');
 
 const commentSchema = new mongoose.Schema({
-  ip: String,
-  text: String,
+  token: String,
   createdAt: { type: Date, default: Date.now },
-  token: String
+  text: String,
+  isMine: Boolean
 });
 
 module.exports = mongoose.model('Comment', commentSchema);
